@@ -1,0 +1,30 @@
+<!-- 
+  This template gets placed in the Pet tab's <ion-nav-view> directive.
+  It was wired up in the app config (app.js) 
+  The 'pets' data comes from its $scope within PetIndexCtrl (controller.js)
+-->
+
+
+<!-- used for main ui -->
+<ion-view title="United Health Care">
+  <ion-content>
+
+    <ion-list>
+
+      <ion-item class="item-icon-right" ng-repeat="pet in pets" type="item-text-wrap" href="#/tab/home/{{pet.id}}">
+        <h3>{{pet.title}}</h3>
+        <p>{{pet.description}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+
+
+       <ion-item class="item-icon-right" type="item-text-wrap" ui-sref="find-plan">
+        <h3>FIND PLANS</h3>
+        <p>loremn</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+      </ion-item>
+      
+    </ion-list>
+
+  </ion-content>
+</ion-view>
